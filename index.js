@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/pages/index.html');
+  res.sendFile(__dirname + 'index.html');
 });
 
 app.post('/register', async (req, res) => {
@@ -65,11 +65,11 @@ app.post('/register', async (req, res) => {
 });
 
 app.get("/success", (req, res) => {
-  res.sendFile(__dirname + "/pages/success.html");
+  res.sendFile(__dirname + "success.html");
 });
 
 app.get("/error", (req, res) => {
-  res.sendFile(__dirname + "/pages/error.html");
+  res.sendFile(__dirname + "error.html");
 });
 
 app.listen(port, () => {
